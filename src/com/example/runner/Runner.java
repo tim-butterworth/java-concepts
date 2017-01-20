@@ -1,5 +1,6 @@
 package com.example.runner;
 
+import com.example.constructors.ConstructorExampleObject;
 import com.example.fields.FieldExampleObject;
 import com.example.methods.MethodExampleObject;
 import com.example.thisExample.ThisExampleObject;
@@ -26,11 +27,20 @@ public class Runner {
         thisExampleObject.getThis().getThis().getThis().getThis().getThis();
 
         //constructors
+        printFields(new ConstructorExampleObject("value1"));
+        printFields(new ConstructorExampleObject("value1", 12));
+        printFields(new ConstructorExampleObject("value1", 12, "value2"));
 
         //instance vs class
 
         //visibility
 
         //inheritance
+    }
+
+    private static void printFields(ConstructorExampleObject constructorExampleObject) {
+        System.out.println("value1 -> " + constructorExampleObject.getValue1());
+        System.out.println("value2 -> " + constructorExampleObject.getValue2());
+        System.out.println("integer -> " + constructorExampleObject.getInteger());
     }
 }
