@@ -2,6 +2,7 @@ package com.example.runner;
 
 import com.example.fields.FieldExampleObject;
 import com.example.methods.MethodExampleObject;
+import com.example.thisExample.ThisExampleObject;
 
 public class Runner {
     public static void main(String[] args) {
@@ -15,12 +16,14 @@ public class Runner {
         System.out.println(fieldExampleObject.age);
         System.out.println(fieldExampleObject.comment);
         System.out.println(fieldExampleObject.name);
-        
+
         //methods
         MethodExampleObject methodExampleObject = new MethodExampleObject();
         methodExampleObject.giveMeAStringPlease();
 
         //"this"
+        ThisExampleObject thisExampleObject = new ThisExampleObject();
+        thisExampleObject.getThis().getThis().getThis().getThis().getThis();
 
         //constructors
 
